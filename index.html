@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>COVA || MANAGE VBP CERT</title>
+
+    <!--Export Js-->
+    <link rel="stylesheet" href="../../../sweetalert/lib/sweet-alert.css" />
+    <script src="../../../sweetalert/lib/sweet-alert.min.js"></script>
+    <script src="../../../angular/angular.min.js"></script>
+    <script src="../../../angular/angular-idle.min.js"></script>
+
+    <script src="../../../angular/angular-route.min.js"></script>
+    <script src="../../../angular/angular-ngprogress.js"></script>
+    <script src="../../../angular/angular-upload.js"></script>
+
+    <script src="admin/modules/verifyVBPCert/verifyvbpcerthCrtl.js?v30"></script>
+    <!--<script src="bank_admin/modules/Account/userCtrl.js"></script>-->
+    <!-- Angular Services -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="../../../authServices.js?v16"></script>
+    <script src="admin/userservices.js?v10"></script>
+    <script src="../../../notificationServices.js?v15"></script>
+    <style>
+        @font-face {
+            font-family: 'raavibold';
+            src: url('fonts/raavib-webfont.woff2') format('woff2'),url('fonts/raavib-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        ;@page {
+            width: '595px', height: '842px', margin: '0px'
+        }
+
+        .reports-outer {
+            margin-bottom: 30px
+        }
+
+        @media print {
+            .pagebreak {
+                page-break-after: always
+            }
+        }
+    </style>
+
+
+</head>
+<body ng-app="txtUser" ng-controller="UserCrtl">
+    <div><table width="100%" cellpadding="0" cellspacing="0" border="0"><tbody><tr><td align="center" valign="top"><table width="800px" cellpadding="0" cellspacing="0" border="0" style="border:5px solid #392C7C"><tbody><tr><td valign="top" align="center"><table width="784px" cellpadding="0" cellspacing="0" border="0" style="margin-top: 5px; margin-bottom: 5px; border:2px solid #000000"><tbody><tr><td valign="top" align="center"><table width="780px" cellpadding="0" cellspacing="0" border="0"><tbody><tr><td align="left" valign="top" style="width:140px"></td><td align="center" valign="top" style="font-family: Arial, Helvetica, sans-serif; font-size: 21px"><img src="https://cova.punjab.gov.in/images/logo.png" width="70" alt="" style="padding-bottom: 15px;padding-top: 5px;"></td><td width="140px"></td></tr></tbody></table><table width="780px" cellpadding="0" cellspacing="0" border="0"><tbody><tr><td align="center" valign="top" style="font-family: Arial, Helvetica, sans-serif; "><p style="margin:0; font-size: 20px; padding-top: 10px"><font color="#284871"><strong>Verification of Certificate for Covid-19 Vaccination</strong></font></p><p style="margin:0; font-size: 20px"><font color="#284871"><strong>1st Dose&nbsp; </strong></font></p></td></tr></tbody></table><table width="500px" align="left" cellpadding="0" cellspacing="2" border="0" style="padding-left: 15px"><tbody><tr><td><tr><td align="left" valign="top" style="font-family: Arial, Helvetica, sans-serif; font-color:#284871; font-size: 23px"> <label style="margin:0"><font color="#CC3F2F"><strong>Beneficiary Details </strong></font></label></td></tr><tr><td align="left" valign="top" style="font-family:'raavibold', Arial, Helvetica, sans-serif; font-size: 19px"> <label style="margin:0"><strong>Beneficiary Name/ਲਾਭਪਾਤਰੀ ਦਾ ਨਾਮ</strong></label><br> <label style="margin:0">PEVANSH GULATI</label></td></tr><tr><td align="left" valign="top" style="font-family:'raavibold', Arial, Helvetica, sans-serif; font-size: 19px"> <label style="margin:0"><strong>Age/ਉਮਰ</strong></label><br> <label style="margin:0">1999</label></td></tr><tr><td align="left" valign="top" style="font-family:'raavibold', Arial, Helvetica, sans-serif; font-size: 19px"> <label style="margin:0"><strong>Gender/ਲਿੰਗ</strong></label><br> <label style="margin:0">MALE</label></td></tr><tr><td align="left" valign="top" style="font-family:'raavibold', Arial, Helvetica, sans-serif; font-size: 19px"> <label style="margin:0"><strong>ID Verified/ਸ਼ਨਾਖਤ ਦੀ ਕਿਸਮ</strong></label><br> <label style="margin:0">AADHAR CARD</label></td></tr><tr><td align="left" valign="top" style="font-family:'raavibold', Arial, Helvetica, sans-serif; font-size: 19px"> <label style="margin:0"><strong>Beneficiary Reference ID</strong></label><br> <label style="margin:0">PB1610869075</label></td></tr></td><td width="150px"></td></tr><tr><td><tr><td align="left" valign="top" style="font-family: Arial, Helvetica, sans-serif; font-size: 23px"> <label style="margin:0"><font color="#CC3F2F"><strong>Vaccination Details </strong></font></label></td></tr><tr><td align="left" valign="top" style="font-family:'raavibold', Arial, Helvetica, sans-serif; font-size: 19px"> <label style="margin:0"><strong>Vaccine Name/ਟੀਕੇ ਦਾ ਨਾਮ </strong></label><br> <label style="margin:0">Covishield</label></td></tr><tr><td align="left" valign="top" style="font-family:'raavibold', Arial, Helvetica, sans-serif; font-size: 19px"> <label style="margin:0"><strong>Date of Dose/.ਖੁਰਾਕ ਦੀ ਮਿਤੀ </strong></label><br> <label style="margin:0">25/05/2021</label></td></tr><tr><td align="left" valign="top" style="font-family:'raavibold', Arial, Helvetica, sans-serif; font-size: 19px"> <label style="margin:0"><strong>Vaccination at/ਟੀਕਾਕਰਨ ਦੀ ਜਗ੍ਹਾਂ</strong></label><br> <label style="margin:0">PATIALA</label></td></tr><tr><td align="left" valign="middle" style="padding-top:10px"></td></tr></td></tr></tbody></table><table width="150px" height="480px" align="center" valign="bottom" cellpadding="0" cellspacing="0" border="0"><tbody><tr><td></td></tr></tbody></table><table width="780px" cellpadding="0" cellspacing="0" border="0" style="padding-top: 10px"><tbody><tr><td align="center" valign="middle"></td></tr></tbody></table><table width="780px" cellpadding="0" cellspacing="0" border="0" style="padding-top: 10px"><tbody><tr><td align="center" valign="middle" style="font-family: Arial, Helvetica, sans-serif; font-size: 22px"><p style="margin:0"><font color="#392F74"></font></p></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div>
+
+    <!-- ./wrapper -->
+    <!-- jQuery -->
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../../plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <!-- Bootstrap 4 -->
+    <script src="../../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- DataTables -->
+    <script src="../../../plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <!-- ChartJS -->
+    <script src="../../../plugins/chart.js/Chart.min.js"></script>
+    <!-- Sparkline -->
+    <script src="../../../plugins/sparklines/sparkline.js"></script>
+    <!-- JQVMap -->
+    <!--<script src="../../../plugins/jqvmap/jquery.vmap.min.js"></script>
+    <script src="../../../plugins/jqvmap/maps/jquery.vmap.usa.js"></script>-->
+    <!-- jQuery Knob Chart -->
+    <script src="../../../plugins/jquery-knob/jquery.knob.min.js"></script>
+    <!-- daterangepicker -->
+    <script src="../../../plugins/moment/moment.min.js"></script>
+    <script src="../../../plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="../../../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- Summernote -->
+    <script src="../../../plugins/summernote/summernote-bs4.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../../../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../../dist/js/adminlte.js"></script>
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <!--<script>
+        $(function () {
+            $("#table1").DataTable({
+                responsive: true,
+                autoWidth: false,
+                searching: false,
+                ordering: true,
+                lengthChange: false,
+                paging: true
+            });
+        });
+    </script>-->
+    <script src="../../../datatablesjs/dataTables.buttons.min.js?v1"></script>
+    <script src="../../../datatablesjs/buttons.flash.min.js?v1"></script>
+    <script src="../../../datatablesjs/jszip.min.js?v1"></script>
+    <!--<script src="../../../datatablesjs/pdfmake.min.js?v1"></script>-->
+    <!--<script src="../../../datatablesjs/vfs_fonts.js?v1"></script>-->
+    <script src="../../../datatablesjs/buttons.html5.min.js?v1"></script>
+    <script src="../../../datatablesjs/buttons.print.min.js?v1"></script>
+    <script src="../../../plugins/Resources/ui-bootstrap-tpls-0.13.4.min.js"></script>
+</body>
+
+</html>
